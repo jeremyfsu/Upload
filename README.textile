@@ -1,22 +1,18 @@
-h1. Website
-
-"Visit Upload Website.":http://buddylee.org/blog/new-radiant-extension-upload/
-
 h1. Justification
 
-I started my search by looking for available upload extensions for Radiant CMS. The most popular one I found was Paperclipped. After some trail runs with Paperclipped I wasn’t satisfied. I found that it was trying to be too smart for my good. I think my clients need something simple. They just want the ability to upload files and reference them in their web pages. To me that sounds like an web based scp/ftp application. This extension is the first step in that direction.
+This project was borne out of a need to upload files into Radiant CMS. I started by looking for existing upload extensions and the most popular one I found was Paperclipped. After experimenting with Paperclipped, I found that it was trying to be too smart for my needs. My clients need a basic upload feature that is simple. It should have the basic create, read, upload, and delete methods. It should be global and located in one place that is usable without training. This extension is a step in that direction.
 
 h1. Features
 
-* Ability to upload binary file (images, pdf, etc.)
-* See a list of uploaded files
+* Upload binary files (images, pdf, etc.)
+* View a list of uploaded files
 * Delete files you have uploaded
-* Exception handling
-* Auto create upload directory
 
-h1. Features coming soon
+h1. Feature Road Map
 
-* Clickable insert into Textile based pages
+* Meta data: Tags, Keywords (which is optional)
+* Subdirectories
+* Search / Filter
 
 h1. Getting started
 
@@ -27,4 +23,4 @@ h1. Getting started
 
 h1. Support requests
 
-If you have any ideas or change requests please send me an email at buddy [at] buddylee [dot] org and I’ll be happy to update the source code.
+Update 3/7/2011 - I have retired my use of Radiant CMS. Feel free to fork this project to continue development.
