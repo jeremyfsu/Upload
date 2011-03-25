@@ -9,8 +9,10 @@ class Admin::UploadController < ApplicationController
   
   def upload
     @file = params[:file]
-    @filename = params[:file].original_filename
-    post = UploadFile.create(@file)
+    if @file
+      @filename = params[:file].original_filename
+      post = UploadFile.create(@file)
+    end
     redirect_to :action => "index"
   end
   
