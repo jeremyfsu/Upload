@@ -12,7 +12,8 @@ class UploadExtension < Radiant::Extension
   end
   
   def deactivate
-    admin.tabs.remove "Upload"
+#    admin.tabs.remove "Upload"
+#  was this deprecated? could not get upload to work in Radian 0.9.1 until this was commented
   end
   
 end
