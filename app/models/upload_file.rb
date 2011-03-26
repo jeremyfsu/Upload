@@ -1,6 +1,6 @@
 class UploadFile < ActiveRecord::Base
 
-  @@directory = "public/upload"
+  @@directory = "#{RAILS_ROOT}/public/upload"
   attr_accessor :file, :filename
 
   def initialize(filename="")
@@ -10,7 +10,7 @@ class UploadFile < ActiveRecord::Base
   end
   
   def self.find(pattern)
-    FileUtils.mkdir_p 'public/upload'
+    FileUtils.mkdir_p @@directory
     if pattern == :all then pattern = "" end# to follow how other ruby libs work
     files = self.cleanup_files(Dir.new(@@directory).entries)
     files = self.filter_files(files, pattern)
@@ -22,7 +22,7 @@ class UploadFile < ActiveRecord::Base
   end
   
   def self.create(file)
-    FileUtils.mkdir_p 'public/upload'
+    FileUtils.mkdir_p @@directory
     filename = file.original_filename.gsub(" ", "_")
     path = File.join(@@directory, filename)
     File.open(path, "w+") { |f| f.write(file.read) }
